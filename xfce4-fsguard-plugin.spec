@@ -11,7 +11,7 @@ Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/%{url_ve
 Requires:	xfce4-panel >= 4.8.0
 BuildRequires:	xfce4-panel-devel >= 4.8.0
 BuildRequires:	perl(XML::Parser)
-BuildRequires:	libxfcegui4-devel
+BuildRequires:	libxfce4ui-devel
 Obsoletes:	xfce-fsguard-plugin
 
 %description
@@ -33,7 +33,6 @@ rm -rf %{buildroot}%{_iconsdir}/hicolor/icon-theme.cache
 
 %files -f %{name}.lang
 %doc README NEWS AUTHORS ChangeLog
-%{_libdir}/xfce4/panel-plugins/*
-%{_datadir}/xfce4/panel-plugins/*
-%{_iconsdir}/hicolor/*/apps/*.png
-%{_iconsdir}/hicolor/scalable/apps/*.svg
+%{_libdir}/xfce4/panel/plugins/libfsguard.so
+%{_datadir}/xfce4/panel-plugins/*.desktop
+%{_iconsdir}/hicolor/*/apps/*.*g
