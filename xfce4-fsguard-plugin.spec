@@ -34,5 +34,5 @@ rm -rf %{buildroot}%{_iconsdir}/hicolor/icon-theme.cache
 %files -f %{name}.lang
 %doc README NEWS AUTHORS ChangeLog
 %{_libdir}/xfce4/panel/plugins/libfsguard.so
-%{_datadir}/xfce4/panel-plugins/*.desktop
+%{_datadir}/xfce4/panel/plugins/fsguard.desktop
 %{_iconsdir}/hicolor/*/apps/*.*g
