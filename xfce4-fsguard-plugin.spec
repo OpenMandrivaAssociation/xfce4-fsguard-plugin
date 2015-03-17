@@ -3,7 +3,7 @@
 Summary:	Disk space plugin for the Xfce panel
 Name:		xfce4-fsguard-plugin
 Version:	1.0.1
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-fsguard-plugin
