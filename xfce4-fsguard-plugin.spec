@@ -1,17 +1,18 @@
 %define url_ver %(echo %{version} | cut -c 1-3)
+%define _disable_rebuild_configure 1
 
 Summary:	Disk space plugin for the Xfce panel
 Name:		xfce4-fsguard-plugin
-Version:	1.0.1
-Release:	4
+Version:	1.1.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-fsguard-plugin
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
 Requires:	xfce4-panel >= 4.8.0
-BuildRequires:	pkgconfig(libxfce4panel-1.0)
+BuildRequires:	pkgconfig(libxfce4panel-2.0)
 BuildRequires:	perl(XML::Parser)
-BuildRequires:	pkgconfig(libxfce4ui-1)
+BuildRequires:	pkgconfig(libxfce4ui-2)
 
 %description
 Disk space panel plugin for the Xfce Desktop Environment.
