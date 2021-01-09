@@ -33,7 +33,7 @@ rm -rf %{buildroot}%{_iconsdir}/hicolor/icon-theme.cache
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc README NEWS AUTHORS ChangeLog
+%doc README* NEWS AUTHORS ChangeLog
 %{_libdir}/xfce4/panel/plugins/*
 %{_datadir}/xfce4/panel/plugins/*
 %{_iconsdir}/hicolor/*/apps/*.png
