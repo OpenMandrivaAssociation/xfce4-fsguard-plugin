@@ -7,7 +7,7 @@ Version:	1.1.3
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
-URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-fsguard-plugin
+URL:		https://goodies.xfce.org/projects/panel-plugins/xfce4-fsguard-plugin
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
 Requires:	xfce4-panel 
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
