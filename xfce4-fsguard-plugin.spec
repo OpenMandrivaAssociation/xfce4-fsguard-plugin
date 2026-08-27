@@ -3,34 +3,30 @@
 
 Summary:	Disk space plugin for the Xfce panel
 Name:		xfce4-fsguard-plugin
-Version:	1.1.4
+Version:	1.2.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		https://goodies.xfce.org/projects/panel-plugins/xfce4-fsguard-plugin
 Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
 Requires:	xfce4-panel 
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	libtool-base
-BuildRequires:	slibtool
+BuildRequires:	meson
 BuildRequires:	make
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
-BuildRequires:	perl(XML::Parser)
 BuildRequires:	pkgconfig(libxfce4ui-2)
 
 %description
 Disk space panel plugin for the Xfce Desktop Environment.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%configure
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 chmod +x %{buildroot}%{_libdir}/xfce4/panel/plugins/*.so
 rm -rf %{buildroot}%{_iconsdir}/hicolor/icon-theme.cache
@@ -38,7 +34,7 @@ rm -rf %{buildroot}%{_iconsdir}/hicolor/icon-theme.cache
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc README* NEWS AUTHORS ChangeLog
+%doc README* NEWS AUTHORS
 %{_libdir}/xfce4/panel/plugins/*
 %{_datadir}/xfce4/panel/plugins/*
 %{_iconsdir}/hicolor/*/apps/*.png
